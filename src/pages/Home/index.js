@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-
-// import { Container } from './styles';
+// import {} Link
+import { MdHome } from 'react-icons/lib/md'
+import { Container, MainText } from './styles'
 
 export default function Home() {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <Container>
+      <MainText>Home</MainText>
+    </Container>
   )
 }

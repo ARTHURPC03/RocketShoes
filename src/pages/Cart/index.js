@@ -1,12 +1,10 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-
-// import { Container } from './styles';
+import { Container, MainText } from './styles'
 
 export default function Cart() {
   return (
-    <View>
-      <Text>Carrinho</Text>
-    </View>
+    <Container>
+      <MainText>Carrinho</MainText>
+    </Container>
   )
 }

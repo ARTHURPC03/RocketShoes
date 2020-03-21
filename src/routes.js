@@ -1,29 +1,26 @@
 import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { MdHome, MdShoppingCart } from 'react-icons/lib/md'
 
 import Home from './pages/Home'
 import Cart from './pages/Cart'
 
-const Stack = createStackNavigator()
+const Tab = createBottomTabNavigator()
 
 export default function Routes() {
   return (
-    <Stack.Navigator
-      headerBackTitleVisible={false}
-      headerLayoutPreset="center"
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: '#7159c1',
+    <Tab.Navigator
+      tabBarOptions={{
+        activeTintColor: 'rgb(4, 211, 97)',
+        style: {
+          backgroundColor: '#0B0A0D',
+          alignItems: 'center',
+          justifyContent: 'center',
         },
-        headerTintColor: '#FFF',
       }}
     >
-      <Stack.Screen name="Home" component={Home} options={{ title: 'Home' }} />
-      <Stack.Screen
-        name="Cart"
-        component={Cart}
-        options={{ title: 'Carrinho' }}
-      />
-    </Stack.Navigator>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Cart" component={Cart} />
+    </Tab.Navigator>
   )
 }
