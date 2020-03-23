@@ -1,12 +1,13 @@
 import React from 'react'
-// import {} Link
-import { MdHome } from 'react-icons/lib/md'
+import { Button } from 'react-native'
+
 import { Container, MainText } from './styles'
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <Container>
       <MainText>Home</MainText>
+      <Button title="Go to Cart" onPress={() => navigation.navigate('Cart')} />
     </Container>
   )
 }
