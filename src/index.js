@@ -1,16 +1,21 @@
 import 'react-native-gesture-handler'
 import React from 'react'
-
-import { NavigationContainer } from '@react-navigation/native'
+import { StatusBar } from 'react-native'
+import { Provider } from 'react-redux'
+import FlashMessage from 'react-native-flash-message'
 
 import './config/ReactotronConfig'
 
 import Routes from './routes'
 
+import store from './store'
+
 export default function App() {
   return (
-    <NavigationContainer>
+    <Provider store={store}>
       <Routes />
-    </NavigationContainer>
+      <StatusBar backgroundColor="#141419" barStyle="light-content" />
+      <FlashMessage position="top" />
+    </Provider>
   )
 }

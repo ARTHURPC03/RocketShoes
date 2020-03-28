@@ -1,20 +1,16 @@
-import styled from 'styled-components/native'
-import colors from '../../styles/colors'
+import styled from 'styled-components/native';
 
-import logo from '../../assets/images/logo.png'
-
-export const Wrapper = styled.SafeAreaView`
-  flex: 0;
-  background: ${colors.dark};
-  flex-direction: row;
-`
+import logo from '../../assets/logo.png';
 
 export const Container = styled.View`
+  background: #141419;
+  width: 100%;
+  height: 50px;
   flex-direction: row;
-  flex: 1;
   justify-content: space-between;
-  padding: 20px;
-`
+  align-items: center;
+  padding: 5px;
+`;
 
 export const Logo = styled.Image.attrs({
   source: logo,
@@ -22,27 +18,31 @@ export const Logo = styled.Image.attrs({
 })`
   width: 185px;
   height: 24px;
-`
+`;
 
-export const BasketContainer = styled.TouchableOpacity`
+export const IconContainer = styled.TouchableOpacity`
   height: 24px;
   width: 24px;
   flex: 1;
   align-items: flex-end;
   justify-content: flex-end;
-`
+  flex-direction: row;
+  margin-right: 5px;
+`;
 
-export const ItemCount = styled.Text`
+export const AmountContainer = styled.View`
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: #7159c1;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  text-align: center;
-  top: -8px;
-  right: -8px;
-  min-width: 18px;
-  min-height: 18px;
-  background: ${colors.primary};
+  right: -6px;
+  bottom: 12px;
+`;
+
+export const AmountText = styled.Text`
+  font-size: 10px;
   color: #fff;
-  font-size: 12px;
-  padding: 2px;
-  border-radius: 9px;
-  overflow: hidden;
-`
+`;
