@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import { useNavigation } from '@react-navigation/native'
 import {
   Container,
   ProductList,
@@ -55,6 +56,8 @@ export default function Cart() {
     dispatch(CartActions.updateAmountRequest(product.id, product.amount - 1))
   }
 
+  const navigation = useNavigation()
+
   return (
     <Container>
       <Header />
@@ -101,14 +104,17 @@ export default function Cart() {
             <TotalText>TOTAL</TotalText>
             <Total>{total}</Total>
             <OrderButton>
-              <OrderButtonText>CHECKOUT</OrderButtonText>
+              <OrderButtonText>FINALIZAR PEDIDO</OrderButtonText>
             </OrderButton>
           </TotalContainer>
         </>
       ) : (
         <EmptyCartContainer>
           <Icon name="remove-shopping-cart" color="#fff" size={100} />
-          <ProductTitle> No products here. </ProductTitle>
+          <ProductTitle> Carrinho vazio</ProductTitle>
+          <OrderButton onPress={() => navigation.navigate('Home')}>
+            <OrderButtonText>VOLTAR PARA HOME</OrderButtonText>
+          </OrderButton>
         </EmptyCartContainer>
       )}
     </Container>

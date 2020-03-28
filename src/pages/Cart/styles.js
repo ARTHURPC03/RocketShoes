@@ -69,8 +69,9 @@ export const ProductImage = styled.Image`
 `
 
 export const ProductTitle = styled.Text`
-  color: #333333;
+  color: #ffff;
   font-size: 16px;
+  margin-bottom: 15px;
 `
 
 export const ProductPrice = styled.Text`

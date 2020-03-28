@@ -18,7 +18,9 @@ export default function Header() {
   const navigation = useNavigation()
   return (
     <Container>
-      <Logo />
+      <IconContainer onPress={() => navigation.navigate('Home')}>
+        <Logo />
+      </IconContainer>
 
       <IconContainer onPress={() => navigation.navigate('Cart')}>
         <Icon name="shopping-basket" color="#FFF" size={24} />

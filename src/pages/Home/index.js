@@ -68,7 +68,7 @@ export default function Home() {
                 <ProductAmountText>{amount[item.id] || 0}</ProductAmountText>
               </ProductAmount>
 
-              <ProductButtonText>ADD TO CART</ProductButtonText>
+              <ProductButtonText>ADICIONAR AO CARRINHO</ProductButtonText>
             </ProductButton>
           </Product>
         )}
