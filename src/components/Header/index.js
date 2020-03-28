@@ -1,8 +1,8 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { useNavigation } from '@react-navigation/native';
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { useNavigation } from '@react-navigation/native'
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import {
   Container,
@@ -10,12 +10,12 @@ import {
   IconContainer,
   AmountContainer,
   AmountText,
-} from './styles';
+} from './styles'
 
 export default function Header() {
-  const cartSize = useSelector(state => state.cart.length);
+  const cartSize = useSelector(state => state.cart.length)
 
-  const navigation = useNavigation();
+  const navigation = useNavigation()
   return (
     <Container>
       <Logo />
@@ -27,5 +27,5 @@ export default function Header() {
         </AmountContainer>
       </IconContainer>
     </Container>
-  );
+  )
 }

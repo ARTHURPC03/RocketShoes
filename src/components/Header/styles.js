@@ -1,6 +1,6 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components/native'
 
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.png'
 
 export const Container = styled.View`
   background: #141419;
@@ -10,7 +10,7 @@ export const Container = styled.View`
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-`;
+`
 
 export const Logo = styled.Image.attrs({
   source: logo,
@@ -18,7 +18,7 @@ export const Logo = styled.Image.attrs({
 })`
   width: 185px;
   height: 24px;
-`;
+`
 
 export const IconContainer = styled.TouchableOpacity`
   height: 24px;
@@ -28,7 +28,7 @@ export const IconContainer = styled.TouchableOpacity`
   justify-content: flex-end;
   flex-direction: row;
   margin-right: 5px;
-`;
+`
 
 export const AmountContainer = styled.View`
   width: 16px;
@@ -40,9 +40,9 @@ export const AmountContainer = styled.View`
   position: absolute;
   right: -6px;
   bottom: 12px;
-`;
+`
 
 export const AmountText = styled.Text`
   font-size: 10px;
   color: #fff;
-`;
+`
